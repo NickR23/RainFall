@@ -17,7 +17,7 @@ public class DrawingComponent extends JPanel implements ActionListener{
 	Timer worldT = new Timer (5,this);
 	
 	//Sets the number of RainDrop objects generated
-	int numOfDrops = 90;
+	int numOfDrops = 200;
     //Makes an array of RainDrop objects
     RainDrop[] Drops = new RainDrop[numOfDrops];
 
