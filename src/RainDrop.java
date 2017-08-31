@@ -1,14 +1,7 @@
-import javax.swing.*;
-import java.awt.event.*;
 import java.util.Random;
 
 
-public class RainDrop implements ActionListener{
-	
-	
-	
-	//Declares the timer object for the RainDrop
-	Timer RainT = new Timer (5,this);
+public class RainDrop{
 	
 	//Gives a random horizontal location for the rain drop and velocity
 	Random randx = new Random();
@@ -24,11 +17,8 @@ public class RainDrop implements ActionListener{
 	 
 	 //Initializes the RainDrop object
 	 //Also starts the internal clocks for each raindrop
-	 public void init() {
-		 RainT.start();
-	 }
 	 
-	 public void actionPerformed(ActionEvent e) {
+	 public void updateLoc() {
 		 if(rainy >= 690) {
 				Random randx = new Random();
 				Random randv = new Random();
@@ -40,3 +30,5 @@ public class RainDrop implements ActionListener{
 		 rainy += vely;
 	 }
 }
+	 
+

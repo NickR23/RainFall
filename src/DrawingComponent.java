@@ -23,13 +23,9 @@ public class DrawingComponent extends JPanel implements ActionListener{
 
 
     public void clockStart(){
-        //Starts the clock for the sailboat and clouds :)
-        //Give the starting x value for clouds in parameter...start clouds 
-        //at 1125px
         //Also init all the drops
         for(int i=0; i<numOfDrops ; i++){
             Drops[i] = new RainDrop();
-            Drops[i].init();
         }
         
         worldT.start();
@@ -72,6 +68,9 @@ public class DrawingComponent extends JPanel implements ActionListener{
     }
 	
     public void actionPerformed(ActionEvent e){
+        for(int j = 0; j<numOfDrops; j++) {
+    			Drops[j].updateLoc();
+        }
         repaint();
     }
     
