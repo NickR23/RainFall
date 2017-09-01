@@ -34,13 +34,15 @@ public class DrawingComponent extends JPanel implements ActionListener{
     
     
 	//Loads these images in as a BufferedImage class when called
-	BufferedImage raindrop,backdrop;
+	BufferedImage raindrop,backdrop,ball;
 	
     public void imageLoad () throws IOException{
     File file = new File("backdrop.jpg");
     backdrop = ImageIO.read(file);
     File file1 = new File("raindrop1.png");
     raindrop = ImageIO.read(file1);
+    File file2 = new File("ball.png");
+    ball = ImageIO.read(file2);
     }
     
     //Paints to the JPanel
@@ -64,7 +66,7 @@ public class DrawingComponent extends JPanel implements ActionListener{
         for(int c = 0; c<numOfDrops; c++) {
         		g2d.drawImage(raindrop,Drops[c].getX(),Drops[c].getY(),null);
         }
-        
+        g2d.drawImage(ball,70,400,null);
     }
 	
     public void actionPerformed(ActionEvent e){
